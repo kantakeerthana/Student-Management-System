@@ -1,0 +1,423 @@
+
+/* ==========================================
+   STUDENT MANAGEMENT SYSTEM
+   Professional Navy Blue + White Theme
+========================================== */
+
+:root {
+    --navy: #10254a;
+    --navy-light: #1e3a6d;
+    --blue: #2563eb;
+    --blue-hover: #1d4ed8;
+    --white: #ffffff;
+    --text: #1e293b;
+    --muted: #64748b;
+    --border: #dbe5f1;
+    --background: #eaf2ff;
+    --shadow: 0 10px 30px rgba(16, 37, 74, 0.10);
+}
+
+/* Reset */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+
+    /* Professional gradient background */
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(96, 165, 250, 0.28),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(147, 197, 253, 0.35),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #dbeafe 0%,
+            #f8fbff 48%,
+            #dbeafe 100%
+        );
+
+    background-attachment: fixed;
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: var(--navy);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: clamp(27px, 4vw, 36px);
+    text-align: center;
+    margin: 25px 0;
+}
+
+h2 {
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+h3 {
+    font-size: 19px;
+}
+
+p {
+    color: var(--muted);
+}
+
+/* Navigation bar */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 17px 20px;
+
+    background: linear-gradient(
+        100deg,
+        #10254a,
+        #1e3a6d
+    );
+
+    box-shadow: 0 5px 18px rgba(16, 37, 74, 0.20);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 9px 16px;
+    border-radius: 8px;
+    transition: 0.25s ease;
+}
+
+nav a:hover {
+    background: #2563eb;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Main content */
+main,
+.container,
+.content,
+.form-container {
+    width: min(94%, 1100px);
+    margin: 35px auto;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Sections and cards */
+section,
+.card,
+.form-card,
+.student-form {
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(203, 218, 239, 0.95);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    padding: 25px;
+    margin-bottom: 24px;
+}
+
+/* Forms */
+form {
+    width: min(100%, 720px);
+    margin: 25px auto;
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+/* Form labels */
+label {
+    display: block;
+    color: var(--navy);
+    font-weight: 600;
+    margin: 13px 0 7px;
+}
+
+/* Inputs */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    margin: 0 0 13px;
+
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--text);
+
+    background: #f8fbff;
+    border: 1px solid #cbd8eb;
+    border-radius: 9px;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    background: white;
+    border-color: var(--blue);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+/* Buttons */
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+    display: inline-block;
+    width: auto;
+    min-width: 120px;
+    padding: 12px 22px;
+    margin: 8px 6px 8px 0;
+
+    color: white;
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #1e40af
+    );
+
+    border: none;
+    border-radius: 9px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.20);
+    transition: 0.25s ease;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover {
+    background: linear-gradient(
+        135deg,
+        #1d4ed8,
+        #10254a
+    );
+    transform: translateY(-2px);
+    box-shadow: 0 7px 17px rgba(37, 99, 235, 0.25);
+}
+
+/* Professional tables */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin: 25px auto;
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 25px auto;
+
+    background: rgba(255, 255, 255, 0.97);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+}
+
+/* Table header */
+thead th,
+th {
+    padding: 16px 18px;
+    color: white;
+    text-align: left;
+    font-weight: 700;
+    white-space: nowrap;
+
+    background: linear-gradient(
+        100deg,
+        #10254a,
+        #1e40af
+    );
+}
+
+/* Table cells */
+td {
+    padding: 14px 18px;
+    text-align: left;
+    color: #334155;
+    border-bottom: 1px solid #e5edf7;
+}
+
+/* Alternating row colours */
+tbody tr:nth-child(even) {
+    background: #eff6ff;
+}
+
+tbody tr:nth-child(odd) {
+    background: white;
+}
+
+/* Table hover effect */
+tbody tr {
+    transition: background 0.2s ease;
+}
+
+tbody tr:hover {
+    background: #dbeafe;
+}
+
+/* Remove last row's bottom border */
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Links */
+a {
+    color: var(--blue);
+    transition: 0.2s ease;
+}
+
+a:hover {
+    color: var(--navy);
+}
+
+/* Links inside tables */
+td a {
+    display: inline-block;
+    margin: 3px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* Messages */
+.success,
+.success-message {
+    color: #166534;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 9px;
+    padding: 13px 16px;
+}
+
+.error,
+.error-message {
+    color: #b91c1c;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 9px;
+    padding: 13px 16px;
+}
+
+/* Footer */
+footer {
+    margin-top: 45px;
+    padding: 22px;
+    color: white;
+    text-align: center;
+    background: linear-gradient(
+        100deg,
+        #10254a,
+        #1e3a6d
+    );
+}
+
+footer p {
+    color: #dbeafe;
+}
+
+/* Entrance animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive layout */
+@media (max-width: 700px) {
+    nav {
+        padding: 12px;
+        gap: 5px;
+    }
+
+    nav a {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    main,
+    .container,
+    .content,
+    .form-container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    form,
+    section,
+    .card,
+    .form-card,
+    .student-form {
+        padding: 18px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+
+    button,
+    input[type="submit"],
+    input[type="button"],
+    input[type="reset"] {
+        min-width: 100px;
+        padding: 10px 14px;
+    }
+}
